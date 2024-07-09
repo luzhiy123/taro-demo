@@ -42,9 +42,9 @@ class Index extends Component<PropsWithChildren<PageStateProps>> {
     counterStore.incrementAsync();
   };
 
-  goHome = () => {
+  goIndex = () => {
     Taro.navigateTo({
-      url: '/pages/info/index',
+      url: '/pages/index/index',
     });
   };
 
@@ -54,11 +54,11 @@ class Index extends Component<PropsWithChildren<PageStateProps>> {
     } = this.props.store;
     return (
       <View className="index">
-        <Button onClick={this.increment}>+</Button>
-        <Button onClick={this.decrement}>-</Button>
+        <Button onClick={this.increment}>+ +++</Button>
+        <Button onClick={this.decrement}>- +++</Button>
         <Button onClick={this.incrementAsync}>Add Async</Button>
         <Text>{counter}</Text>
-        <Button onClick={this.goHome}>go detail</Button>
+        <Button onClick={this.goIndex}>goHome</Button>
       </View>
     );
   }
